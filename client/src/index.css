@@ -1,68 +1,114 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
+/* 1️⃣ Reset & Normalize Styles */
+* {
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+/* 2️⃣ Global Variables */
+:root {
+  --primary-color: #ff5e17;
+  --secondary-color: #1d1e21;
+  --secondary-darker: #161618;
+  --text-color: #ffffff;
+  --font-family: "Oswald", sans-serif;
+  --max-width: 1200px;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+/* 3️⃣ Apply Global Styles */
+html,
+body {
+  font-family: var(--font-family);
+  /* color: var(--text-color); */
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Default Styles for Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* Links */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Lists */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Images */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* 4️⃣ Utility Classes */
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  border: none;
+  outline: 2px solid #ff5e17;
+  /* font-weight: 600; */
+  border-radius: 999px;
+  background-color: var(--primary-color);
+  color: white;
+  font-size: 16px;
   cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  transition: all 0.3s ease;
+  /* font-family: inherit; */
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.btn:hover {
+  /* background-color: var(--secondary-color); */
+  background-color: transparent;
+  color: #ff5e17;
+}
+
+.banner {
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 5%;
+  color: white;
+  text-align: left;
+}
+
+/* .banner h1 {
+  font-size: 3rem;
+  max-width: 600px;
+} */
+
+@media (max-width: 768px) {
+  /* .banner {
+    height: 70vh;
+    padding: 0 3%;
+  } */
+  /* .banner h1 {
+    font-size: 2rem;
+  } */
 }
