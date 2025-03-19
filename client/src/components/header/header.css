@@ -6,7 +6,7 @@
 }
 /* upper */
 .components__header-upper {
-  background: var(--secondary-darker);
+  background: var(--secondary-lighter);
   display: flex;
   justify-content: center;
   align-items: center;

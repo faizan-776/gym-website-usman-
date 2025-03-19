@@ -11,7 +11,7 @@
 :root {
   --primary-color: #ff5e17;
   --secondary-color: #1d1e21;
-  --secondary-darker: #161618;
+  --secondary-lighter: rgb(45, 46, 48);
   --text-color: #ffffff;
   --font-family: "Oswald", sans-serif;
   --max-width: 1200px;
@@ -59,8 +59,12 @@ img {
 /* 4️⃣ Utility Classes */
 .container {
   max-width: var(--max-width);
-  margin: 0 auto;
-  padding: 0 20px;
+  width: 100%;
+  margin: 6rem auto;
+  /* padding: 6rem 0; */
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
 }
 
 .btn {
@@ -98,17 +102,8 @@ img {
   text-align: left;
 }
 
-/* .banner h1 {
-  font-size: 3rem;
-  max-width: 600px;
-} */
-
-@media (max-width: 768px) {
-  /* .banner {
-    height: 70vh;
-    padding: 0 3%;
-  } */
-  /* .banner h1 {
-    font-size: 2rem;
-  } */
+@media (max-width: 1350px) {
+  .container {
+    max-width: 90%;
+  }
 }
