@@ -8,8 +8,8 @@ import HomeFourth from "./containers/HomeFourth";
 const Home = () => {
   return (
     <div className="home">
-      {/* <HomeFirst />
-      <HomeSecond /> */}
+      <HomeFirst />
+      <HomeSecond />
       <HomeThird />
       <HomeFourth />
     </div>
