@@ -2,7 +2,7 @@ import React from "react";
 import strength from "../../../assets/pexels-victorfreitas-791763 (1).webp";
 import cardio from "../../../assets/pexels-olly-3763868.webp";
 import yoga from "../../../assets/pexels-olly-868757.webp";
-import weight from "../../../assets/young-fitness-woman-measure-with-tape-her-belly-isolated-white-wall.webp";
+import weight from "../../../assets/front-view-young-female-green-t-shirt-checking-her-waist-light-pink-wall-waist-sport-exercise-workouts-beauty-slim-athlete-female.webp";
 import martial from "../../../assets/karate-round-kick-punching-bag.webp";
 import athletic from "../../../assets/front-view-fit-man-running-equipment.webp";
 
@@ -26,37 +26,37 @@ const HomeThird = () => {
       img: strength,
       title: "Strength Training",
       description:
-        "Build muscle and improve endurance with guided strength training.",
+        "Develop muscular strength and endurance through structured weightlifting and resistance exercises. Our program focuses on progressive overload techniques, proper form, and personalized workout plans to help you build lean muscle, enhance bone density, and improve overall fitness.",
     },
     {
       img: cardio,
       title: "Cardio Workouts",
       description:
-        "Boost your heart health with high-intensity cardio exercises.",
+        "Boost your cardiovascular health with high-intensity interval training (HIIT), endurance runs, and heart-pumping exercises. This program is designed to increase stamina, burn fat efficiently, and improve lung capacity while keeping workouts fun and engaging.",
     },
     {
       img: yoga,
       title: "Yoga & Flexibility",
       description:
-        "Improve flexibility and mental clarity with structured yoga programs.",
+        "Enhance your flexibility, balance, and mental clarity through guided yoga sessions. Whether you're looking for stress relief, improved posture, or increased mobility, our yoga program incorporates mindfulness techniques, deep stretches, and breath control for a complete mind-body experience.",
     },
     {
       img: weight,
       title: "Weight Loss",
       description:
-        "Burn calories effectively with personalized weight loss training.",
+        "Achieve your fitness goals with our comprehensive weight loss training, combining strength training, cardio, and customized diet recommendations. Our program helps you shed unwanted fat, tone your body, and build sustainable habits for a healthy and active lifestyle.",
     },
     {
       img: martial,
       title: "Martial Arts",
       description:
-        "Learn self-defense and enhance discipline with martial arts training.",
+        "Develop self-defense skills, agility, and discipline with our martial arts training. Whether it's kickboxing, taekwondo, or mixed martial arts (MMA), this program enhances coordination, reaction time, and mental focus while providing a full-body workout.",
     },
     {
       img: athletic,
       title: "Athletic Performance",
       description:
-        "Train like an athlete with high-performance sports conditioning.",
+        "Train like a professional athlete with sport-specific conditioning, agility drills, and power-building exercises. This program is designed to enhance speed, strength, endurance, and reaction time, making it ideal for competitive athletes and fitness enthusiasts looking to push their limits.",
     },
   ];
 
