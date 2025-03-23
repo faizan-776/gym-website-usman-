@@ -81,12 +81,8 @@ img {
   max-width: var(--max-width);
   width: 100%;
   margin: 0 auto;
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
   padding: 6rem 0;
 }
-
 .btn {
   display: inline-block;
   padding: clamp(8px, 1vw, 12px) clamp(16px, 2vw, 24px);

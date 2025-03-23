@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import banner1 from "../../../assets/victor-freitas-WvDYdXDzkhs-unsplash.webp";
-import banner2 from "../../../assets/pexels-ivan-samkov-4164510.webp";
-import banner3 from "../../../assets/young-fitness-man-studio.webp";
+import banner1 from "../../../assets/banners/lifting.webp";
+import banner2 from "../../../assets/banners/dumbell.webp";
+import banner3 from "../../../assets/banners/rope.webp";
 
 const banners = [banner1, banner2, banner3];
 

@@ -297,3 +297,30 @@
   padding: 15px;
   font-size: 1.2rem;
 }
+
+/* home__homefifth */
+.home__homefifth {
+  background-color: var(--secondary-lighter);
+  padding: 6rem 0;
+  text-align: center;
+}
+
+.homefifth-container {
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.home__homefifth-heading {
+  margin-bottom: 2rem;
+}
+
+.home__homefifth-heading h2 {
+  color: var(--primary-color);
+  font-size: clamp(18px, 2vw, 20px);
+}
+
+.home__homefifth-heading h1 {
+  color: var(--text-color);
+  font-size: clamp(30px, 5vw, 60px);
+}

@@ -3,7 +3,7 @@ import "./header.css";
 import { CiLocationOn } from "react-icons/ci";
 import { LuPhone } from "react-icons/lu";
 import { MdOutlineMail } from "react-icons/md";
-import logo from "../../assets/logo.png";
+import logo from "../../assets/icons/logo.png";
 
 const Header = () => {
   return (
@@ -32,7 +32,9 @@ const Header = () => {
       <div className="components__header-lower">
         <div className="components__header-lower_logo">
           <img src={logo} alt="Logo" className="logo" />
-          <h1>Titan <span>Gym</span></h1>
+          <h1>
+            Titan <span>Gym</span>
+          </h1>
         </div>
         <ul className="components__header-lower_nav">
           <li>Home</li>

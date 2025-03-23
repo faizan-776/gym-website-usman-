@@ -1,9 +1,9 @@
 import React from "react";
-import couple from "../../../assets/Untitled design (1).webp";
-import progression from "../../../assets/arm-muscle.webp";
-import workout from "../../../assets/barbell.webp";
-import nutrition from "../../../assets/diet.webp";
-import selfdefence from "../../../assets/martial-arts-couple-fight.webp";
+import couple from "../../../assets/banners/couple.webp";
+import progression from "../../../assets/icons/arm-muscle.webp";
+import workout from "../../../assets/icons/barbell.webp";
+import nutrition from "../../../assets/icons/diet.webp";
+import selfdefence from "../../../assets/icons/martial-arts.webp";
 
 const ReasonCard = ({ img, title, description }) => {
   return (

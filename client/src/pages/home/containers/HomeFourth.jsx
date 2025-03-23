@@ -1,7 +1,7 @@
 import React from "react";
-import trainer1 from "../../../assets/gymtrainer1.webp";
-import trainer2 from "../../../assets/gymtrainer2.webp";
-import trainer3 from "../../../assets/gymtrainer3.webp";
+import trainer1 from "../../../assets/trainers/gymtrainer1.webp";
+import trainer2 from "../../../assets/trainers/gymtrainer2.webp";
+import trainer3 from "../../../assets/trainers/gymtrainer3.webp";
 
 const HomeFourth = () => {
   const trainers = [

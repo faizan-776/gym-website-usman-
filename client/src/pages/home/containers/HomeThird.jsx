@@ -1,10 +1,10 @@
 import React from "react";
-import strength from "../../../assets/pexels-victorfreitas-791763 (1).webp";
-import cardio from "../../../assets/pexels-olly-3763868.webp";
-import yoga from "../../../assets/pexels-olly-868757.webp";
-import weight from "../../../assets/front-view-young-female-green-t-shirt-checking-her-waist-light-pink-wall-waist-sport-exercise-workouts-beauty-slim-athlete-female.webp";
-import martial from "../../../assets/karate-round-kick-punching-bag.webp";
-import athletic from "../../../assets/front-view-fit-man-running-equipment.webp";
+import strength from "../../../assets/services/strength.webp";
+import cardio from "../../../assets/services/cardio.webp";
+import yoga from "../../../assets/services/yoga.webp";
+import weight from "../../../assets/services/weight.webp";
+import martial from "../../../assets/services/martial-art.webp";
+import athletic from "../../../assets/services/athlete.webp";
 
 const Card = ({ img, title, description }) => {
   return (
