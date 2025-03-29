@@ -145,3 +145,28 @@
   font-size: clamp(16px, 2vw, 18px);
   text-align: center;
 }
+/* about__aboutthird */
+.about__aboutthird {
+  background-color: var(--secondary-lighter);
+  text-align: center;
+}
+.about__aboutthird .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 2rem;
+}
+.home__homefourth-carousal {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.home__homefourth-carousal > * {
+  flex: 1;
+  max-width: 100%;
+}
