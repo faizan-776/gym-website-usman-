@@ -126,6 +126,7 @@
   color: var(--primary-color);
   text-align: left;
   font-size: clamp(24px, 3vw, 30px);
+  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7);
 }
 .home__homesecond-content_reasons-card p {
   color: var(--text-color);

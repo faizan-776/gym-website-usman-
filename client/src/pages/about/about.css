@@ -45,3 +45,103 @@
     align-items: center;
   }
 }
+/* about__aboutsecond */
+.about__aboutsecond {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+  background-color: var(--secondary-color);
+}
+.about__aboutsecond .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  flex-wrap: wrap;
+}
+.about__aboutsecond-upper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4rem;
+}
+.about__aboutsecond-upper_img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+.about__aboutsecond-upper_img img {
+  width: clamp(200px, 40vw, 500px);
+  height: auto;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  box-shadow: var(--box-shadow);
+  max-width: 100%;
+}
+.about__aboutsecond-upper_content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 2rem;
+  flex: 1;
+}
+.about__aboutsecond-upper_content-heading h2 {
+  color: var(--primary-color);
+  font-size: clamp(18px, 2vw, 20px);
+}
+.about__aboutsecond-upper_content-heading h1 {
+  color: var(--text-color);
+  font-size: clamp(30px, 5vw, 60px);
+}
+.about__aboutsecond-upper_content p {
+  color: var(--text-color);
+}
+.about__aboutsecond-lower {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4rem;
+}
+.about__aboutsecond-lower_card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+  width: 100%;
+  max-width: 300px;
+  min-height: 380px;
+  background-color: var(--secondary-lighter);
+  text-align: center;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: var(--box-shadow);
+}
+.about__aboutsecond-lower_card img {
+  width: clamp(80px, 10vw, 100px);
+  height: clamp(80px, 10vw, 100px);
+  object-fit: cover;
+  border-radius: 20%;
+  display: block;
+  padding: 1rem;
+  background: var(--secondary-lighter);
+  box-shadow: var(--box-shadow);
+}
+.about__aboutsecond-lower_card h3 {
+  color: var(--primary-color);
+  text-align: left;
+  font-size: clamp(24px, 3vw, 30px);
+  text-align: center;
+  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7);
+}
+.about__aboutsecond-lower_card p {
+  color: var(--text-color);
+  text-align: left;
+  font-size: clamp(16px, 2vw, 18px);
+  text-align: center;
+}
