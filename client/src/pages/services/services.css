@@ -44,3 +44,7 @@
     align-items: center;
   }
 }
+/* services__servicessecond */
+.services__servicessecond {
+  background-color: var(--secondary-lighter);
+}
