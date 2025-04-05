@@ -1,3 +1,4 @@
+/* General Header Styles */
 .header {
   width: 100%;
   color: var(--text-color);
@@ -9,7 +10,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
+  gap: 1rem;
   padding: 1rem 0;
   background: var(--secondary-lighter);
 }
@@ -19,7 +20,9 @@
   align-items: center;
   gap: 0.5rem;
   cursor: pointer;
+  transition: 0.3s ease;
 }
+
 .header-upper_item p {
   transition: 0.3s ease;
   font-size: clamp(0.7rem, 1.5vw, 1rem);
@@ -36,7 +39,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  gap: 0.5rem;
+  gap: 1rem;
   flex-wrap: wrap;
 }
 
@@ -64,6 +67,7 @@
   color: var(--primary-color);
 }
 
+/* Header Actions */
 .header-actions {
   display: flex;
   align-items: center;
@@ -72,14 +76,15 @@
   justify-content: flex-end;
 }
 
-/* ===== Nav Links ===== */
+/* Navigation Links */
 .nav-links ul {
   display: flex;
   gap: 4rem;
   list-style: none;
   font-weight: bold;
-  transition: all 0.3s ease
+  transition: all 0.3s ease;
 }
+
 .nav-links ul li {
   cursor: pointer;
   transition: color 0.3s ease, transform 0.3s ease;
@@ -90,7 +95,7 @@
   transform: translateY(-2px);
 }
 
-/* ===== Hamburger ===== */
+/* Hamburger (only for mobile) */
 .hamburger {
   display: none;
   cursor: pointer;
@@ -98,58 +103,55 @@
   align-items: center;
 }
 
-/* ===== Media Queries ===== */
-
-/* Mobile */
+/* Mobile Navigation (Sliding Panel) */
 @media (max-width: 1024px) {
   .nav-links {
     position: fixed;
     top: 0;
-    right: -100%;
-    width: 70%;
-    height: 100%;
+    left: 0;
+    width: 100%;
+    height: 100vh;
     background: var(--secondary-color);
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    transition: 0.4s ease-in-out;
+    justify-content: center;
+    transform: translateY(-100%);
+    transition: transform 0.4s ease-in-out;
     z-index: 1000;
   }
-
+  
   .nav-links.open {
-    right: 0;
+    transform: translateY(0);
   }
+  
 
   .nav-links ul {
     flex-direction: column;
-    text-align: center;
-    display: flex;
     gap: 2rem;
-  }
-
-  .hamburger {
-    display: flex;
+    text-align: center;
   }
 
   .nav-links ul li {
-    font-size: 1.5rem;
+    font-size: clamp(1rem, 3vw, 2rem);
+    font-weight: 300;
   }
-}
 
-/* Tiny screens */
-@media (max-width: 425px) {
-  .header-lower {
-    padding: 0.5rem;
+  .nav-close-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
   }
-  .header-upper {
-    padding: 0.5rem;
-    gap: 0.5rem;
-  }
-}
 
-/* Desktop */
-@media (min-width: 1025px) {
   .hamburger {
+    display: flex;
+  }
+}
+
+/* Desktop: keep nav inline, hide hamburger & close button */
+@media (min-width: 1025px) {
+  .hamburger,
+  .nav-close-btn {
     display: none;
   }
 
@@ -165,3 +167,14 @@
   }
 }
 
+/* Tiny screens adjustments */
+@media (max-width: 425px) {
+  .header-lower {
+    padding: 0.5rem;
+  }
+
+  .header-upper {
+    padding: 0.5rem;
+    gap: 0.5rem;
+  }
+}

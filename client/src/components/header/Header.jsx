@@ -10,8 +10,13 @@ import "./header.css";
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <header className="header">
+      {/* Upper Section */}
       <div className="header-upper">
         <div className="header-upper_item">
           <CiLocationOn size={20} />
@@ -29,7 +34,9 @@ const Header = () => {
         </div>
       </div>
 
+      {/* Lower Section */}
       <div className="header-lower">
+        {/* Logo */}
         <div className="header-lower_logo">
           <img src={logo} alt="Logo" />
           <h1>
@@ -37,20 +44,26 @@ const Header = () => {
           </h1>
         </div>
 
+        {/* Navigation */}
         <nav className={`nav-links ${isOpen ? "open" : ""}`}>
+          {/* Close button inside nav panel (visible only on mobile) */}
+          <div className="nav-close-btn" onClick={toggleMenu}>
+            <IoMdClose size={30} />
+          </div>
           <ul>
             {["Home", "Services", "Trainers", "Blog", "About"].map((item) => (
-              <li key={item} onClick={() => setIsOpen(false)}>
+              <li key={item} onClick={toggleMenu}>
                 {item}
               </li>
             ))}
           </ul>
         </nav>
 
+        {/* Contact Button & Hamburger */}
         <div className="header-actions">
           <button className="btn">Contact Us</button>
-          <div className="hamburger" onClick={() => setIsOpen(!isOpen)}>
-            {isOpen ? <IoMdClose size={30} /> : <FiMenu size={30} />}
+          <div className="hamburger" onClick={toggleMenu}>
+            <FiMenu size={30} />
           </div>
         </div>
       </div>

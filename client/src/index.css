@@ -110,3 +110,14 @@ img {
     padding: 2rem;
   }
 }
+/* @media (hover: none) {
+  .nav-links li:hover,
+  .btn:hover,
+  .card:hover,
+  .header-upper_item:hover {
+    transform: none !important;
+    background: inherit !important;
+    color: inherit !important;
+    box-shadow: none !important;
+  }
+} */
