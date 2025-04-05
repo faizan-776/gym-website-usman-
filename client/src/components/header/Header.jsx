@@ -1,75 +1,60 @@
 import React, { useState } from "react";
-import "./header.css";
 import { CiLocationOn } from "react-icons/ci";
 import { LuPhone } from "react-icons/lu";
 import { MdOutlineMail } from "react-icons/md";
 import { FiMenu } from "react-icons/fi";
 import { IoMdClose } from "react-icons/io";
 import logo from "../../assets/icons/logo.png";
+import "./header.css";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  // Toggle Menu and Prevent Scroll on Open
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-    document.body.classList.toggle("menu-open", !isOpen);
-  };
-
   return (
-    <div className="components__header">
-      {/* Upper Section */}
-      <div className="components__header-upper">
-        <div className="components__header-upper_location">
-          <CiLocationOn
-            style={{ color: "var(--primary-color)", fontSize: "24px" }}
-          />
-          <p>430 E State St Lola, Wisconsin</p>
+    <header className="header">
+      <div className="header-upper">
+        <div className="header-upper_item">
+          <CiLocationOn size={20} />
+          <p>430 E State St, Lola</p>
         </div>
-        <div className="components__header-upper_phone">
-          <LuPhone
-            style={{ color: "var(--primary-color)", fontSize: "24px" }}
-          />
+        <span>|</span>
+        <div className="header-upper_item">
+          <LuPhone size={20} />
           <p>+1 234 567 8900</p>
         </div>
-        <div className="components__header-upper_email">
-          <MdOutlineMail
-            style={{ color: "var(--primary-color)", fontSize: "24px" }}
-          />
+        <span>|</span>
+        <div className="header-upper_item">
+          <MdOutlineMail size={20} />
           <p>abc@xyz.com</p>
         </div>
       </div>
 
-      <hr color="#2d2e30" />
-
-      {/* Lower Section */}
-      <div className="components__header-lower">
-        {/* Logo */}
-        <div className="components__header-lower_logo">
-          <img src={logo} alt="Logo" className="logo" />
+      <div className="header-lower">
+        <div className="header-lower_logo">
+          <img src={logo} alt="Logo" />
           <h1>
             Titan <span>Gym</span>
           </h1>
         </div>
 
-        {/* Navigation */}
-        <ul className={`components__header-lower_nav ${isOpen ? "open" : ""}`}>
-          <li onClick={toggleMenu}>Home</li>
-          <li onClick={toggleMenu}>Services</li>
-          <li onClick={toggleMenu}>Trainers</li>
-          <li onClick={toggleMenu}>Blog</li>
-          <li onClick={toggleMenu}>About</li>
-        </ul>
+        <nav className={`nav-links ${isOpen ? "open" : ""}`}>
+          <ul>
+            {["Home", "Services", "Trainers", "Blog", "About"].map((item) => (
+              <li key={item} onClick={() => setIsOpen(false)}>
+                {item}
+              </li>
+            ))}
+          </ul>
+        </nav>
 
-        {/* Contact Button & Hamburger */}
-        <div className="components__header-lower_actions">
+        <div className="header-actions">
           <button className="btn">Contact Us</button>
-          <div className="hamburger" onClick={toggleMenu}>
+          <div className="hamburger" onClick={() => setIsOpen(!isOpen)}>
             {isOpen ? <IoMdClose size={30} /> : <FiMenu size={30} />}
           </div>
         </div>
       </div>
-    </div>
+    </header>
   );
 };
 
