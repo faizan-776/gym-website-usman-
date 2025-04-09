@@ -54,7 +54,7 @@ const Header = () => {
             <IoMdClose size={30} />
           </div>
           <ul>
-            {["Home", "Services", "Trainers", "Blog", "About"].map((item) => (
+            {["Home", "Services", "Team", "Blog", "About"].map((item) => (
               <li key={item}>
                 {/* Convert item text to proper route path */}
                 <Link to={item === "Home" ? "/" : `/${item.toLowerCase()}`} onClick={toggleMenu}>

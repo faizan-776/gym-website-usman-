@@ -1,7 +1,7 @@
 /* home__homefirst */
 .home__homefirst {
   width: 100%;
-  height: 100vh;
+  height: 80vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -188,7 +188,7 @@
 .home__homethird-cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
+  gap: 1rem;
   width: 100%;
   max-width: 1200px;
   justify-content: center;
@@ -264,8 +264,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 2rem;
-  margin-top: 2rem;
+  gap: 1rem;
 }
 
 .home__homefourth-experts_card {
@@ -304,7 +303,7 @@
 /* home__homefifth */
 .home__homefifth {
   background-color: var(--secondary-lighter);
-  padding: 6rem 0;
+  padding: 2rem;
   text-align: center;
 }
 

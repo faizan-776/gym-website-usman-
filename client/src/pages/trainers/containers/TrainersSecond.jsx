@@ -46,7 +46,6 @@ const TrainersSecond = () => {
             </div>
           ))}
         </div>
-        <hr />
         <div className="trainers__trainerssecond-gallery">
           <Photogallery images={images} />
         </div>
