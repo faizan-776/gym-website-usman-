@@ -15,11 +15,11 @@ import img5 from "../../../assets/carousel/brand-5.webp";
 
 const Card = ({ img, title, description }) => {
   return (
-    <div className="home__homethird-cards_card">
+    <div className="services__servicessecond-cards_card">
       <div className="home__homethird-cards_card-img">
         <img src={img} alt={title} />
       </div>
-      <div className="home__homethird-cards_card-detail">
+      <div className="services__servicessecond-cards_card-detail">
         <h3>{title}</h3>
         <p>{description}</p>
       </div>
@@ -34,52 +34,52 @@ const ServicesSecond = () => {
       img: strength,
       title: "Strength Training",
       description:
-        "Develop muscular strength and endurance through structured weightlifting and resistance exercises. Our program focuses on progressive overload techniques, proper form, and personalized workout plans to help you build lean muscle, enhance bone density, and improve overall fitness.",
+        "It is long estabas and many lished fact will been distracted atempts by them content system and looking for its layout.",
     },
     {
       img: cardio,
       title: "Cardio Workouts",
       description:
-        "Boost your cardiovascular health with high-intensity interval training (HIIT), endurance runs, and heart-pumping exercises. This program is designed to increase stamina, burn fat efficiently, and improve lung capacity while keeping workouts fun and engaging.",
+        "It is long estabas and many lished fact will been distracted atempts by them content system and looking for its layout.",
     },
     {
       img: yoga,
       title: "Yoga & Flexibility",
       description:
-        "Enhance your flexibility, balance, and mental clarity through guided yoga sessions. Whether you're looking for stress relief, improved posture, or increased mobility, our yoga program incorporates mindfulness techniques, deep stretches, and breath control for a complete mind-body experience.",
+        "It is long estabas and many lished fact will been distracted atempts by them content system and looking for its layout.",
     },
     {
       img: weight,
       title: "Weight Loss",
       description:
-        "Achieve your fitness goals with our comprehensive weight loss training, combining strength training, cardio, and customized diet recommendations. Our program helps you shed unwanted fat, tone your body, and build sustainable habits for a healthy and active lifestyle.",
+        "It is long estabas and many lished fact will been distracted atempts by them content system and looking for its layout.",
     },
     {
       img: martial,
       title: "Martial Arts",
       description:
-        "Develop self-defense skills, agility, and discipline with our martial arts training. Whether it's kickboxing, taekwondo, or mixed martial arts (MMA), this program enhances coordination, reaction time, and mental focus while providing a full-body workout.",
+        "It is long estabas and many lished fact will been distracted atempts by them content system and looking for its layout..",
     },
     {
       img: athletic,
       title: "Athletic Performance",
       description:
-        "Train like a professional athlete with sport-specific conditioning, agility drills, and power-building exercises. This program is designed to enhance speed, strength, endurance, and reaction time, making it ideal for competitive athletes and fitness enthusiasts looking to push their limits.",
+        "It is long estabas and many lished fact will been distracted atempts by them content system and looking for its layout..",
     },
   ];
   return (
     <div className="services__servicessecond">
       <div className="container">
-        <div className="home__homethird-heading">
+        <div className="services__servicessecond-heading">
           <h2>Our Services</h2>
           <h1>Training Programs</h1>
         </div>
-        <div className="home__homethird-cards">
+        <div className="services__servicessecond-cards">
           {trainingPrograms.map((program, index) => (
             <Card key={index} {...program} />
           ))}
         </div>
-        <div className="home__homefourth-carousal">
+        <div className="services__servicessecond-gallery">
           <PhotoGallery images={images} />
         </div>
       </div>
