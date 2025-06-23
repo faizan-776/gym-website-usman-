@@ -6,22 +6,23 @@ import trainer4 from "../../../assets/trainers/gymtrainer4.webp";
 import trainer5 from "../../../assets/trainers/gymtrainer5.webp";
 import trainer6 from "../../../assets/trainers/gymtrainer6.webp";
 
-import Photogallery from "../../../components/carousel/Carousel";
-
 import img1 from "../../../assets/carousel/brand-1.webp";
 import img2 from "../../../assets/carousel/brand-2.webp";
 import img3 from "../../../assets/carousel/brand-3.webp";
 import img4 from "../../../assets/carousel/brand-4.webp";
 import img5 from "../../../assets/carousel/brand-5.webp";
 
+import Photogallery from "../../../components/carousel/Carousel";
+import Trainercard from "../../../components/trainerCard/Trainercard";
+
 const TrainersSecond = () => {
   const trainers = [
-    { name: "Usman Siddiqui", image: trainer1 },
-    { name: "Faizan Siddiqui", image: trainer2 },
-    { name: "Eshal Zahra", image: trainer3 },
-    { name: "Muhib Ahmed", image: trainer4 },
-    { name: "M. Hassan", image: trainer5 },
-    { name: "Sabeh Khan", image: trainer6 },
+    { name: "Steve", image: trainer1 },
+    { name: "Bob", image: trainer2 },
+    { name: "Carla", image: trainer3 },
+    { name: "Logan", image: trainer4 },
+    { name: "Ethan", image: trainer5 },
+    { name: "Jake", image: trainer6 },
   ];
   const images = [img1, img2, img3, img4, img5];
 
@@ -32,20 +33,17 @@ const TrainersSecond = () => {
           <h2>Meet Our Team</h2>
           <h1>Expert Trainers</h1>
         </div>
+
         <div className="trainers__trainerssecond-experts">
           {trainers.map((trainer, index) => (
-            <div key={index} className="trainers__trainerssecond-experts_card">
-              <img
-                src={trainer.image}
-                alt={trainer.name}
-                className="trainers__trainerssecond-experts_card-img"
-              />
-              <div className="trainers__trainerssecond-experts_overlay">
-                <h3>{trainer.name}</h3>
-              </div>
-            </div>
+            <Trainercard
+              key={index}
+              image={trainer.image}
+              name={trainer.name}
+            />
           ))}
         </div>
+
         <div className="trainers__trainerssecond-gallery">
           <Photogallery images={images} />
         </div>

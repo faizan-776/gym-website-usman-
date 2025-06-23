@@ -1,4 +1,5 @@
 import React from "react";
+import Trainercard from "../../../components/trainerCard/Trainercard";
 import trainer1 from "../../../assets/trainers/gymtrainer1.webp";
 import trainer2 from "../../../assets/trainers/gymtrainer2.webp";
 import trainer3 from "../../../assets/trainers/gymtrainer3.webp";
@@ -19,16 +20,11 @@ const HomeFourth = () => {
         </div>
         <div className="home__homefourth-experts">
           {trainers.map((trainer, index) => (
-            <div key={index} className="home__homefourth-experts_card">
-              <img
-                src={trainer.image}
-                alt={trainer.name}
-                className="home__homefourth-experts_card-img"
-              />
-              <div className="home__homefourth-experts_overlay">
-                <h3>{trainer.name}</h3>
-              </div>
-            </div>
+            <Trainercard
+              key={index}
+              image={trainer.image}
+              name={trainer.name}
+            />
           ))}
         </div>
       </div>

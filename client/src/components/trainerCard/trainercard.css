@@ -1,0 +1,33 @@
+.components__trainercard {
+  position: relative;
+  width: clamp(220px, 25vw, 300px);
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  border-radius: 1rem;
+  box-shadow: var(--box-shadow);
+  cursor: pointer;
+}
+
+.components__trainercard:hover .components__trainercard-overlay h3 {
+  color: var(--primary-color);
+}
+.components__trainercard-overlay h3 {
+  transition: color 0.3s ease;
+}
+.components__trainercard-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.components__trainercard-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-size: 1.2rem;
+}
