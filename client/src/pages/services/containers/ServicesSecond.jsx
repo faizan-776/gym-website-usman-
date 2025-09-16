@@ -1,5 +1,4 @@
 import React from "react";
-import PhotoGallery from "../../../components/carousel/Carousel";
 import strength from "../../../assets/services/strength.webp";
 import cardio from "../../../assets/services/cardio.webp";
 import yoga from "../../../assets/services/yoga.webp";
@@ -13,19 +12,8 @@ import img3 from "../../../assets/carousel/brand-3.webp";
 import img4 from "../../../assets/carousel/brand-4.webp";
 import img5 from "../../../assets/carousel/brand-5.webp";
 
-const Card = ({ img, title, description }) => {
-  return (
-    <div className="services__servicessecond-cards_card">
-      <div className="home__homethird-cards_card-img">
-        <img src={img} alt={title} />
-      </div>
-      <div className="services__servicessecond-cards_card-detail">
-        <h3>{title}</h3>
-        <p>{description}</p>
-      </div>
-    </div>
-  );
-};
+import PhotoGallery from "../../../components/carousel/Carousel";
+import Programcard from "../../../components/programCard/Programcard";
 
 const ServicesSecond = () => {
   const images = [img1, img2, img3, img4, img5];
@@ -76,7 +64,12 @@ const ServicesSecond = () => {
         </div>
         <div className="services__servicessecond-cards">
           {trainingPrograms.map((program, index) => (
-            <Card key={index} {...program} />
+            <Programcard
+              key={index}
+              img={program.img}
+              title={program.title}
+              description={program.description}
+            />
           ))}
         </div>
         <div className="services__servicessecond-gallery">

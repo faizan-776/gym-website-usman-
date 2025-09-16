@@ -1,0 +1,186 @@
+/* blog__blogfirst */
+.contact__contactfirst {
+  background-image: url("../../assets/banners/dumbell-lifting.webp");
+  background-size: cover;
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contact__contactfirst::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  height: 100%;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.9), transparent);
+}
+.contact__contactfirst .container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  z-index: 2;
+}
+
+.contact__contactfirst .container h1 {
+  color: var(--text-color);
+  /* font-size: clamp(30px, 5vw, 60px); */
+  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7);
+}
+
+.contact__contactfirst .container h2 {
+  color: var(--primary-color);
+  /* font-size: clamp(18px, 2vw, 20px); */
+  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7);
+}
+@media (max-width: 768px) {
+  .contact__contactfirst .container {
+    align-items: center;
+  }
+}
+
+/* contact__contactsecond */
+.contact__contactsecond {
+  background-color: var(--secondary-color);
+}
+.contact__contactsecond .container {
+  display: flex;
+  justify-content: space-between; /* or just remove it */
+  align-items: stretch;
+  gap: 2rem; /* optional spacing between the two sides */
+}
+
+.contact__contactsecond-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+  flex: 1;
+}
+/* .contact__contactsecond-left_heading {
+} */
+.contact__contactsecond-left_heading h2 {
+  color: var(--primary-color);
+  /* font-size: clamp(18px, 2vw, 20px); */
+}
+.contact__contactsecond-left_heading h1 {
+  color: var(--text-color);
+  /* font-size: clamp(30px, 5vw, 60px); */
+}
+.contact__contactsecond-left_form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  max-width: 500px;
+  /* margin: auto; */
+  width: 100%;
+}
+.contact__contactsecond-left_form input,
+.contact__contactsecond-left_form textarea {
+  padding: 0.8rem 1rem;
+  /* font-size: 1rem; */
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  resize: none;
+  outline: none;
+}
+.contact__contactsecond-left_form textarea {
+  min-height: 150px;
+}
+.contact__contactsecond-left_form .btn {
+  width: 50%;
+}
+.contact__contactsecond-left_form .btn:hover {
+  background-color: var(--primary-dark);
+}
+.contact__contactsecond-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  /* margin-left: 8rem; */
+  gap: 2rem;
+}
+.contact__contactsecond-right_detail {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+  border-radius: 10px;
+  width: clamp(200px, 30vw, 240px);
+  height: clamp(120px, 20vh, 180px);
+  /* box-shadow: var(--box-shadow);
+  background-color: var(--secondary-lighter); */
+}
+.contact__contactsecond-right_detail-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  box-shadow: var(--box-shadow);
+  padding: 1rem;
+}
+.contact__contactsecond-right_detail-img img {
+  border-radius: 10px;
+  /* box-shadow: var(--box-shadow); */
+  /* background-color: var(--secondary-lighter); */
+  width: clamp(30px, 5vw, 60px);
+  height: auto;
+  filter: invert(100%);
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+  max-width: 100%;
+}
+
+.contact__contactsecond-right_detail-img_content h3 {
+  color: var(--primary-color);
+  text-align: left;
+  /* font-size: clamp(24px, 3vw, 30px); */
+  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7);
+}
+.contact__contactsecond-right_detail-img_content p {
+  color: var(--text-color);
+  text-align: left;
+  /* font-size: clamp(16px, 2vw, 18px); */
+}
+@media (max-width: 768px) {
+  .contact__contactsecond .container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .contact__contactsecond-right {
+gap: 0;
+}
+  .contact__contactsecond-left,
+  .contact__contactsecond-right {
+    align-items: center;
+    width: 100%;
+  }
+
+  .contact__contactsecond-left_form {
+    align-items: stretch;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .contact__contactsecond-left_form input,
+  .contact__contactsecond-left_form textarea {
+    width: 100%;
+  }
+
+  .contact__contactsecond-left_form .btn {
+    align-self: center;
+    width: fit-content;
+  }
+}

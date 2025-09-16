@@ -1,5 +1,5 @@
 import React from "react";
-import banner from "../../../assets/banners/couple.webp";
+import couple from "../../../assets/banners/couple.webp";
 import icon1 from "../../../assets/icons/arm-muscle.webp";
 import icon2 from "../../../assets/icons/barbell.webp";
 import icon3 from "../../../assets/icons/diet.webp";
@@ -48,7 +48,7 @@ const AboutSecond = () => {
       <div className="container">
         <div className="about__aboutsecond-upper">
           <div className="about__aboutsecond-upper_img">
-            <img src={banner} alt="Banner" />
+            <img src={couple} alt="Banner" />
           </div>
           <div className="about__aboutsecond-upper_content">
             <div className="about__aboutsecond-upper_content-heading">

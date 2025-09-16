@@ -1,5 +1,5 @@
 import React from "react";
-import PhotoGallery from "../../../components/carousel/Carousel"
+import PhotoGallery from "../../../components/carousel/Carousel";
 import trainer1 from "../../../assets/trainers/gymtrainer1.webp";
 import trainer2 from "../../../assets/trainers/gymtrainer2.webp";
 import trainer3 from "../../../assets/trainers/gymtrainer3.webp";
@@ -10,11 +10,13 @@ import img3 from "../../../assets/carousel/brand-3.webp";
 import img4 from "../../../assets/carousel/brand-4.webp";
 import img5 from "../../../assets/carousel/brand-5.webp";
 
+import Trainercard from "../../../components/trainerCard/Trainercard";
+
 const AboutThird = () => {
   const trainers = [
-    { name: "Usman Siddiqui", image: trainer1 },
-    { name: "Faizan Siddiqui", image: trainer2 },
-    { name: "Eshal Zahra", image: trainer3 },
+    { name: "Steve", image: trainer1 },
+    { name: "Bob", image: trainer2 },
+    { name: "Carla", image: trainer3 },
   ];
   const images = [img1, img2, img3, img4, img5];
   return (
@@ -26,18 +28,14 @@ const AboutThird = () => {
         </div>
         <div className="home__homefourth-experts">
           {trainers.map((trainer, index) => (
-            <div key={index} className="home__homefourth-experts_card">
-              <img
-                src={trainer.image}
-                alt={trainer.name}
-                className="home__homefourth-experts_card-img"
-              />
-              <div className="home__homefourth-experts_overlay">
-                <h3>{trainer.name}</h3>
-              </div>
-            </div>
+            <Trainercard
+              key={index}
+              image={trainer.image}
+              name={trainer.name}
+            />
           ))}
         </div>
+
         <div className="home__homefourth-carousal">
           <PhotoGallery images={images} />
         </div>

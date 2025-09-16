@@ -1,25 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import banner1 from "../../../assets/banners/lifting.webp";
-import banner2 from "../../../assets/banners/dumbell.webp";
-import banner3 from "../../../assets/banners/rope.webp";
-
-const banners = [banner1, banner2, banner3];
 
 const Homefirst = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % banners.length);
-    }, 5000);
-
-    return () => clearInterval(interval);
-  }, []);
-
   return (
     <div
       className="home__homefirst"
-      style={{ backgroundImage: `url(${banners[currentIndex]})` }}
+      style={{ backgroundImage: `url(${banner1})` }}
     >
       <div className="container">
         <div className="home__homefirst-content">

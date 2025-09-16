@@ -6,7 +6,7 @@ import Blog from "./pages/blog/Blog";
 import Trainers from "./pages/trainers/Trainers";
 import About from "./pages/about/About";
 import Services from "./pages/services/Services";
-// import Contact from "./pages/contact/Contact";
+import Contact from "./pages/contact/Contact";
 
 function App() {
   return (
@@ -18,7 +18,7 @@ function App() {
         <Route path="/team" element={<Trainers />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/about" element={<About />} />
-        {/* <Route path="/contact" element={<Contact />} /> */}
+        <Route path="/contact" element={<Contact />} />
       </Routes>
     </div>
   );
