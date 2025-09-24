@@ -4,7 +4,7 @@ import { LuPhone } from "react-icons/lu";
 import { MdOutlineMail } from "react-icons/md";
 import { FiMenu } from "react-icons/fi";
 import { IoMdClose } from "react-icons/io";
-import { Link } from "react-router-dom"; // Import Link
+import { Link } from "react-router-dom";
 import logo from "../../assets/icons/logo.png";
 import "./header.css";
 
