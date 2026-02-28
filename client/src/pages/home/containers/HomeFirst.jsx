@@ -24,7 +24,7 @@ const Homefirst = () => {
             toggleActions: "play none none none",
           },
           immediateRender: false,
-        }
+        },
       );
     }, contentRef);
 
