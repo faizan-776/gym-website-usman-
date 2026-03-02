@@ -6,24 +6,13 @@ import nodemailer from "nodemailer";
 dotenv.config();
 
 const app = express();
-
-// 1. Updated CORS to be more reliable for Vercel -> Render communication
-app.use(
-  cors({
-    origin: "*", // For development; in production, replace "*" with your Vercel URL
-    methods: ["POST", "GET"],
-    credentials: true,
-  }),
-);
-
+app.use(cors());
 app.use(express.json());
 
-// Basic health check route
 app.get("/", (req, res) => {
-  res.send("Gym Server is running perfectly.");
+  res.send("Server is running");
 });
 
-// 2. Optimized Contact Form Route
 app.post("/contact", async (req, res) => {
   const { name, email, number, subject, message } = req.body;
 
@@ -31,32 +20,30 @@ app.post("/contact", async (req, res) => {
     return res.status(400).json({ error: "Required fields missing" });
   }
 
-  // 3. Setup Nodemailer Transporter
-  // Gmail requires an "App Password" — your regular password will NOT work.
+  // 1. Create the transporter (Using the 16-char password WITHOUT spaces)
   const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
       user: process.env.EMAIL_USER,
-      pass: process.env.EMAIL_PASS, // This MUST be a 16-character App Password
+      pass: process.env.EMAIL_PASS,
     },
   });
 
-  // 4. Define Email Options
+  // 2. Configure the email
   const mailOptions = {
-    from: process.env.EMAIL_USER, // Gmail usually forces this to be YOUR email
-    to: process.env.EMAIL_USER, // Where you want to receive the message
-    replyTo: email, // IMPORTANT: This lets you hit 'Reply' to email the customer back
+    from: process.env.EMAIL_USER, // MUST be your Gmail address
+    to: process.env.EMAIL_USER, // Sending the lead to yourself
+    replyTo: email, // This allows you to click 'Reply' to the customer
     subject: subject || `New Gym Lead: ${name}`,
-    text: `New Contact Form Submission:\n\nName: ${name}\nEmail: ${email}\nPhone: ${number}\n\nMessage:\n${message}`,
+    text: `You have a new message:\n\nName: ${name}\nEmail: ${email}\nPhone: ${number}\n\nMessage:\n${message}`,
   };
 
   try {
     await transporter.sendMail(mailOptions);
-    console.log("Email sent successfully!");
     res.status(200).json({ success: "Message sent" });
   } catch (err) {
-    // This logs the EXACT reason for failure in your Render dashboard
-    console.error("Nodemailer Error:", err);
+    // This logs the SPECIFIC reason (like 'Invalid Login') in your Render Logs
+    console.error("DETAILED ERROR:", err);
     res
       .status(500)
       .json({ error: "Failed to send email", details: err.message });
