@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
+import { Link } from "react-router-dom";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import couple from "../../../assets/banners/couple.webp";
 import icon1 from "../../../assets/icons/arm-muscle.webp";
@@ -113,7 +114,9 @@ const AboutSecond = () => {
               This website is a portfolio project and not a real business. It
               was created to showcase web development skills...
             </p>
-            <button className="btn">Our Services</button>
+            <Link to="/services">
+              <button className="btn">Read More</button>
+            </Link>
           </div>
         </div>
 

@@ -92,7 +92,7 @@ const HomeSecond = () => {
   ];
 
   return (
-    <div className="home__homesecond hero-section">
+    <div className="home__homesecond hero-section hero-section">
       <div className="container">
         <div className="home__homesecond-img">
           <img src={couple} alt="banner" />

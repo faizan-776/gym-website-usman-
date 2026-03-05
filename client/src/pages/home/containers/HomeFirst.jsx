@@ -1,5 +1,6 @@
 import banner1 from "../../../assets/banners/lifting.webp";
 import { useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -40,10 +41,13 @@ const Homefirst = () => {
           <h2>Since - 1998</h2>
           <h1>Make Your Body Shape</h1>
           <p>
-            It is a long established fact that a reader will be distracted by
-            readable content of a page when looking at its layout.
+            Beyond the iron and the sweat lies the strongest version of
+            yourself, waiting to be forged through discipline and elite
+            training.
           </p>
-          <button className="btn">Read More</button>
+          <Link to="/about">
+            <button className="btn">Read More</button>
+          </Link>
         </div>
       </div>
     </div>

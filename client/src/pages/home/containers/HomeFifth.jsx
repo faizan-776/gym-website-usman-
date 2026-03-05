@@ -29,7 +29,7 @@ const HomeFifth = () => {
             start: "top bottom", // triggers when heading enters viewport
             toggleActions: "play none none none",
           },
-        }
+        },
       );
 
       // Animate carousel
@@ -47,7 +47,7 @@ const HomeFifth = () => {
             start: "top bottom", // triggers when carousel enters viewport
             toggleActions: "play none none none",
           },
-        }
+        },
       );
     });
 
@@ -57,7 +57,7 @@ const HomeFifth = () => {
   const images = [img1, img2, img3, img4];
 
   return (
-    <div className="home__homefifth">
+    <div className="home__homefifth hero-section">
       <div className="homefifth-container">
         <div className="home__homefifth-heading" ref={headingRef}>
           <h2>Photo Gallery</h2>

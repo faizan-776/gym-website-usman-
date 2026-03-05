@@ -54,7 +54,7 @@ const HomeFourth = ({ count = 3 }) => {
   }, []);
 
   return (
-    <div className="home__homefourth">
+    <div className="home__homefourth hero-section">
       <div className="container">
         <div className="home__homefourth-heading" ref={headingRef}>
           <h2>Meet Our Team</h2>
