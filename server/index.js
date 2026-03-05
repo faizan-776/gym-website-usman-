@@ -1,59 +1,40 @@
 import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
-import nodemailer from "nodemailer";
+import { Resend } from "resend"; // Make sure you ran 'npm install resend'
 
 dotenv.config();
 
 const app = express();
+const resend = new Resend(process.env.RESEND_API_KEY); // Uses the key from Render
+
 app.use(cors());
 app.use(express.json());
-
-app.get("/", (req, res) => {
-  res.send("Server is running");
-});
 
 app.post("/contact", async (req, res) => {
   const { name, email, number, subject, message } = req.body;
 
-  if (!name || !email || !message) {
-    return res.status(400).json({ error: "Required fields missing" });
-  }
-
-  // 1. Create the transporter (Using the 16-char password WITHOUT spaces)
-  const transporter = nodemailer.createTransport({
-    host: "smtp.gmail.com",
-    port: 587,
-    secure: false, // Must be false for port 587
-    auth: {
-      user: process.env.EMAIL_USER,
-      pass: process.env.EMAIL_PASS,
-    },
-    tls: {
-      rejectUnauthorized: false, // Helps bypass some network restrictions
-    },
-  });
-
-  // 2. Configure the email
-  const mailOptions = {
-    from: process.env.EMAIL_USER, // MUST be your Gmail address
-    to: process.env.EMAIL_USER, // Sending the lead to yourself
-    replyTo: email, // This allows you to click 'Reply' to the customer
-    subject: subject || `New Gym Lead: ${name}`,
-    text: `You have a new message:\n\nName: ${name}\nEmail: ${email}\nPhone: ${number}\n\nMessage:\n${message}`,
-  };
-
   try {
-    await transporter.sendMail(mailOptions);
-    res.status(200).json({ success: "Message sent" });
-  } catch (err) {
-    // This logs the SPECIFIC reason (like 'Invalid Login') in your Render Logs
-    console.error("DETAILED ERROR:", err);
-    res
-      .status(500)
-      .json({ error: "Failed to send email", details: err.message });
+    const data = await resend.emails.send({
+      // 1. MUST use this 'from' address until you verify your own domain
+      from: "Gym Contact <onboarding@resend.dev>",
+      // 2. The email where you want to RECEIVE the leads
+      to: process.env.EMAIL_USER,
+      // 3. This lets you click 'Reply' in your email to talk to the customer
+      reply_to: email,
+      subject: subject || "New Gym Lead!",
+      html: `
+        <h3>New Lead from ${name}</h3>
+        <p><strong>Phone:</strong> ${number}</p>
+        <p><strong>Message:</strong> ${message}</p>
+      `,
+    });
+
+    res.status(200).json({ success: "Email sent!" });
+  } catch (error) {
+    console.error("Resend Error:", error);
+    res.status(500).json({ error: "Failed to send" });
   }
 });
 
-const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+app.listen(process.env.PORT || 5000, () => console.log("Server Live!"));
